@@ -1,0 +1,14 @@
+# Secrets / env
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Large datasets (don't commit dvdrental zip dumps)
+docker/datasets/
