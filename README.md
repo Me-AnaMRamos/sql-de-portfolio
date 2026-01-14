@@ -100,19 +100,19 @@ Example query list:
 Start:
 
 ```bash
-docker compose -f docker/compose.yml up -d
+docker compose -f docker/compose.yaml up -d
 ```
 
 Stop:
 
 ```bash
-docker compose -f docker/compose.yml down
+docker compose -f docker/compose.yaml down
 ```
 
 Reset everything (deletes Docker volume data):
 
 ```bash
-docker compose -f docker/compose.yml down -v
+docker compose -f docker/compose.yaml down -v
 ```
 
 ---
