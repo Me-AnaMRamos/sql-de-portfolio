@@ -61,21 +61,17 @@ If your credentials are different, use what you set in `docker/compose.yaml`:
 
 ## Portfolio SQL
 
-Business queries live here:
+All portfolio queries are in:
 
-* `sql/dvdrental/`
+- `sql/dvdrental/`
 
-Recommended convention:
+You can run them in DBeaver (connected to `dvdrental`) or via `psql`.
 
-* Name files `01_*.sql`, `02_*.sql`, etc.
-* Start each file with a short header: goal, output columns, and notes.
-
-Example query list:
-
-* `01_top_customers_by_rentals.sql` — customer ranking (joins + group by)
-* `02_revenue_by_store.sql` — revenue aggregation by store
-* `03_most_rented_categories.sql` — category ranking (multi-join)
-* `04_avg_rental_duration_by_category.sql` — grouping + date/time logic
+### Business analytics queries (dvdrental)
+- `01_top_customers_by_rentals.sql` — joins + GROUP BY + ordering (ranking customers)
+- `02_revenue_by_store.sql` — revenue aggregation by store (payments + rentals)
+- `03_most_rented_categories.sql` — multi-join + aggregation (top categories)
+- `04_top_films_by_rentals.sql` — ranking films by rentals (joins + GROUP BY)
 
 ---
 
