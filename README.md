@@ -12,7 +12,7 @@ This repo is a reproducible SQL playground aimed at Data Engineering interview-s
 From repo root:
 
 ```bash
-docker compose -f docker/docker-compose.yml up -d
+docker compose -f docker/compose.yaml up -d
 ```
 Verify the container is running:
 
@@ -51,7 +51,7 @@ Create a new PostgreSQL connection in DBeaver with:
 * **Username:** `postgres`
 * **Password:** `postgres`
 
-If your credentials are different, use what you set in `docker/docker-compose.yml`:
+If your credentials are different, use what you set in `docker/compose.yaml`:
 
 * `POSTGRES_USER`
 * `POSTGRES_PASSWORD`
@@ -70,7 +70,7 @@ Recommended convention:
 * Name files `01_*.sql`, `02_*.sql`, etc.
 * Start each file with a short header: goal, output columns, and notes.
 
-Example query list (edit to match your current filenames):
+Example query list:
 
 * `01_top_customers_by_rentals.sql` — customer ranking (joins + group by)
 * `02_revenue_by_store.sql` — revenue aggregation by store
@@ -84,7 +84,7 @@ Example query list (edit to match your current filenames):
 ```text
 .
 ├─ docker/
-│  ├─ docker-compose.yml
+│  ├─ compose.yaml
 │  └─ datasets/                 # gitignored (put dvdrental.tar here)
 ├─ scripts/
 │  ├─ restore_dvdrental.sh
@@ -100,19 +100,19 @@ Example query list (edit to match your current filenames):
 Start:
 
 ```bash
-docker compose -f docker/docker-compose.yml up -d
+docker compose -f docker/compose.yml up -d
 ```
 
 Stop:
 
 ```bash
-docker compose -f docker/docker-compose.yml down
+docker compose -f docker/compose.yml down
 ```
 
 Reset everything (deletes Docker volume data):
 
 ```bash
-docker compose -f docker/docker-compose.yml down -v
+docker compose -f docker/compose.yml down -v
 ```
 
 ---
